@@ -1,0 +1,8 @@
+App\Entity\Location:
+  properties:
+    latitude:
+      - Range:
+          min: -180
+          max: 180
+          groups: ['edit', 'create']
+
