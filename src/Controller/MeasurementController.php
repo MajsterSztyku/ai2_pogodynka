@@ -17,6 +17,7 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 class MeasurementController extends AbstractController
 {
     #[Route('/', name: 'app_measurement_index', methods: ['GET'])]
+    #[IsGranted('ROLE_MEASUREMENT_INDEX')]
     public function index(MeasurementRepository $measurementRepository): Response
     {
         return $this->render('measurement/index.html.twig', [
